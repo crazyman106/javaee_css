@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="style.css" />
+ -->
 <style type="text/css">
+
+/* 元素选择器 */
 /* span {
 	color: red;
 	font-size: 150px
 } */
+/* css 选择器 */
 /* id: id选择器具有唯一性,精确性 */
-/* class: class 类选择器 */
-/* id的优先级最高,class排第二,元素选择器最低 */
 /* #s1 {
 	color: red;
 	font-size: 150px
@@ -21,24 +23,178 @@
 	color: blue;
 	font-size: 150px
 } */
-.c1 {
+/* class: class 类选择器 */
+/* .c1 {
 	color: red;
 	font-size: 150px
 }
-
 .c2 {
 	color: blue;
 	font-size: 150px
+} */
+/* id的优先级最高,class排第二,元素选择器最低 */
+/* 属性选择器 语法:基本选择器[属性]="属性值"{css} */
+/* input[type="text"] {
+	background-color: red
+}
+
+input[type="password"] {
+	background-color: blue
+}
+ */
+/* 伪元素选择器    a标签的伪元素:带不同状态下的样式
+	静止状态 a:link{css的属性}
+	悬浮状态 a:hover{css的属性}
+	点击状态 a:active{css的属性}
+	完成状态 a:visited{css的属性}
+ */
+/* a:link {
+	color: black
+}
+
+a:hover {
+	color: red
+}
+
+a:active {
+	color: blue
+}
+
+a:visited {
+	color: orange
+} */
+
+/* 层级选择器 
+	语法:父级选择器 子级选择器.............	
+*/
+/* #d1 .c2 span {
+	color: red
+} */
+
+/* ********************************* */
+/* div {
+	font-size: 20sp;
+	color: red;
+	font-family: 黑体;
+	text-align: center
+}
+
+a {
+	text-decoration: underline;
+}
+
+h1 {
+	 text-decoration: underline;
+} */
+/* body {
+	background-color: red;
+	background-image:
+		url("http://img.taopic.com/uploads/allimg/121019/234917-121019231h258.jpg");
+	background-repeat: no-repeat
+} */
+/* ul {
+	 list-style-type: circle; 
+	list-style-image: url("")
+} */
+/* .div1 {
+	background: red;
+	width: 300px;
+	height: 300px;
+	display: none;
+}
+
+.div2 {
+	background: blue;
+	width: 300px;
+	height: 300px;
+} */
+/* span {
+	display: inline;
+	margin-left: 20px
+} */
+#box {
+	width: 200px;
+	height: 200px;
+	/* 	border-color: blue;
+	border-top-style:dotted;
+	border-width:20px; */
+	border-top: 20px dotted green;
+	padding: 20px;
+	margin: 20px;
+	padding: 20px;
+}
+
+#mooncake {
+	background-color: red;
+	width: 200px;
+	height: 200px;
 }
 </style>
+
 </head>
 <body>
 	<!-- <span id="s1">jsp1</span>
 	<br />
-	<span id="s2">jsp2</span> -->
+	<span id="s2">jsp2</span> 
 	<span class="c1">jsp1</span>
-	<span class="c2">jsp1</span>
+	<span class="c2">jsp1</span> -->
+
+	<!-- <form name="" action="" method="get">
+		name:<input type="text" /><br /> password<input type="password">
+	</form> -->
 
 
+	<!-- <a href="http:www.baidu.com" target="_blank"> click me</a> -->
+
+	<!-- 	<div id="d1">
+		<div class="c1">
+			<span>aaa</span>
+		</div>
+		<div class="c2">
+			<span>bbb</span>
+		</div>
+	</div>
+	<div id="d2">
+		<div class="c1">
+			<span>ccc</span>
+		</div>
+		<div class="c2">
+			<span>ddd</span>
+		</div>
+	</div> -->
+
+	<!-- css的属性
+		1.文字属性: font-size:文字大小;font-family:文字类型;
+		2.文本属性: color:文本颜色;text-align:对齐方式;text-decoration:下划线
+		3.背景属性: background-color:背景颜色;background-image:背景图片 属性值得写法:url(图片地址);background-repeat:平铺方式 默认平铺 属性值(repeat,no-repeat,repeat-x,repeat-y)
+	 	4.列表属性: list-style-type:列表项前的小标志 属性值:....; list-style-image:列表项前面的小图片 属性值:url(图片地址)
+	 	5.尺寸属性: width:宽度;height:高度
+	 	6.显示属性: display:是否显示 属性值:none不显示  block显示(块级显示:自己占据一整行) inline显示(行内显示)
+	 -->
+	<!-- <div>李俊杰</div>
+	<a herf="df">#</a>
+	<h1>lijunjie</h1> -->
+	<!-- <ul>
+		<li>lijunjie</li>
+
+		<li>lijunjie</li>
+
+		<li>lijunjie</li>
+
+		<li>lijunjie</li>
+	</ul> -->
+	<!-- <div></div> -->
+	<!-- <div class=div1></div>
+	<div class=div2></div> -->
+
+	<!-- <input type="text" /><span>对不起输入错误</span> -->
+	<!-- css的盒子模型 
+			1.border:边框,border-width:边框的宽度;border-color:边框的颜色;border-style:边框的线型;border-top,border-bottom.......;
+			2.padding:内边距,padding:上 右 下 左,padding:上 下,padding:上 左右 下;padding-top,padding-right,padding-left,padding-bottom
+	
+	-->
+	<!-- <div id="box">
+		<div id="mooncake"></div>
+	</div> -->
 </body>
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Insert title here</title>
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html" ; charset="UTF-8">
+
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	/* $(document).ready(function(){
+		alert("xxxxx")
+	}); */
+	
+	/* window.onload = function() {
+		var city = document.getElementById("city");
+		city.onchange = function(){
+			var options = city.getElementsByTagName("option");
+			for(var i=0;i<options.length;i++){
+				if(options[i].selected){
+					var val = options[i].getAttribute("value");
+					switch(val){
+						case 'bj':
+							var area = document.getElementById("area");
+							area.innerHTML = "<option>海定区</option>"+
+											 "<option>朝阳区</option>"+
+											 "<option>昌平区</option>";
+							break;
+						case 'tj':
+							var area = document.getElementById("area");
+							area.innerHTML = "<option>aa区</option>"+
+											 "<option>bb区</option>"+
+											 "<option>cc区</option>";
+							break;
+						case 'sh':
+							var area = document.getElementById("area");
+							area.innerHTML = "<option>dd区</option>"+
+											 "<option>ee区</option>"+
+											 "<option>ff区</option>";
+							break;
+					}
+				}
+			}
+		};
+	};  */
+
+	/* $(document).ready(function(){
+		$("#city").change(function(){
+			// 选择获取到配选择的option
+			var $val = $("#city option:selected").val();
+			switch($val){
+			case 'bj':
+				$("#area").html("<option>海定区</option>"+
+										   "<option>朝阳区</option>"+
+										   "<option>昌平区</option>");
+				break;
+			case 'tj':
+				$("#area").html("<option>aa区</option>"+
+						 "<option>bb区</option>"+
+						 "<option>cc区</option>");
+				break;
+			case 'sh':
+				$("#area").html("<option>dd区</option>"+
+						 "<option>ee区</option>"+
+						 "<option>ff区</option>");
+				break;
+		}
+		});
+	}); */
+
+	window.onload = function(){
+	    var city = document.getElementById("city");
+		$(city).change(function(){
+			var $val = $("#city option:selected").val();
+			switch($val){
+			    case "bj":
+				    // jquery对象是数组对象,其中某个元素是一个js的dom对象
+					$("#area")[0].innerHTML="<option>dddd区</option>"+
+											 "<option>dsssss区</option>"+
+											 "<option>ffffff区</option>";
+				    break;
+			    case 'sh':
+				    // jquery对象是数组对象,其中某个元素是一个js的dom对象
+					$("#area")[0].innerHTML="<option>3333333333d区</option>"+
+											 "<option>111111111e区</option>"+
+											 "<option>2222222222222f区</option>";
+				    break;
+			    case 'tj':
+				    // jquery对象是数组对象,其中某个元素是一个js的dom对象
+					$("#area")[0].innerHTML="<option>dd区</option>"+
+											 "<option>ee区</option>"+
+											 "<option>ff区</option>";
+				    break;
+				}
+		});
+	};
+
+</script>
+</head>
+<body>
+	<select id="city">
+		<option value="bj">北京市</option>
+		<option value="tj">天津是</option>
+		<option value="sh">上海市</option>
+	</select>
+
+	<select id="area">
+		<option>海定区</option>
+		<option>朝阳区</option>
+		<option>昌平区</option>
+	</select>
+</body>
+</html>
